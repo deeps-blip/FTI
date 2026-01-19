@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  intake:
+    build: .
+    image: fti-intake
+    container_name: fti-intake
+
+    # Run from project root inside container
+    working_dir: /app
+
+    # Volumes (MOST IMPORTANT PART)
+    volumes:
+      # Source code (for reference + live editing)
+      - ./:/app
+
+      # Malware samples (READ-ONLY for safety)
+      - ./data/samples:/app/data/samples:ro
+
+      # Generated features & reports (WRITEABLE, persisted)
+      - ./data/features:/app/data/features
+
+    # Explicit command (clear intent)
+    command: python ingest_file.py
+
+    # Disable network for malware safety (OPTIONAL but recommended)
+    network_mode: "none"

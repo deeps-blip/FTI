@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+numpy
+scikit-learn
+r2pipe
+pefile
+python-multipart
+pyyaml
+flwr
