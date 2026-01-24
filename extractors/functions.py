@@ -1,5 +1,5 @@
 def extract_functions(r2):
-    funcs = r2.cmdj("aflj") or []
+    funcs = r2.cmdj("aflj") 
     results = []
 
     for f in funcs:
