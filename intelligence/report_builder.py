@@ -88,6 +88,19 @@ def build_report(
         json.dumps(analysis, indent=2)
     )
 
+    # ------------------------------------------------
+    # NEW: separate functions.json (NO logic changes)
+    # ------------------------------------------------
+    (report_dir / "functions.json").write_text(
+        json.dumps(
+            {
+                "function_count": len(functions),
+                "functions": functions
+            },
+            indent=2
+        )
+    )
+
     # Optional: save call graph separately for tooling
     (report_dir / "callgraph.dot").write_text(call_graph)
 
