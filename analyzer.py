@@ -1,4 +1,11 @@
 import runner
+import os
+
+# -----------------------------
+# Dynamic Analysis
+# -----------------------------
+from sandbox.dynamic_runner import run_with_strace
+from sandbox.syscall_parser import parse_syscalls
 
 # -----------------------------
 # Extractors
@@ -21,10 +28,17 @@ from intelligence.file_metadata import extract_file_metadata
 from intelligence.report_builder import build_report
 
 
+SAMPLES_DIR = "data/samples"
+
+
+# ==========================================================
+# FULL HYBRID ANALYSIS
+# ==========================================================
+
 def analyze_binary(binary_path: str) -> dict:
     """
-    Full static malware analysis pipeline.
-    Produces professional-grade threat intelligence reports.
+    Full static + dynamic malware analysis pipeline.
+    Produces hybrid threat intelligence reports.
     """
 
     # -----------------------------
@@ -34,47 +48,46 @@ def analyze_binary(binary_path: str) -> dict:
     r2.analyze()
 
     # -----------------------------
-    # Static extraction
+    # STATIC EXTRACTION
     # -----------------------------
     strings = extract_strings(r2)
     imports = extract_imports(r2)
     functions = extract_functions(r2)
     data_targets = extract_data_targets(strings)
 
-    # -----------------------------
-    # File-level metadata
-    # -----------------------------
     file_metadata = extract_file_metadata(binary_path)
 
-    # -----------------------------
-    # Function-level intelligence
-    # -----------------------------
     intents = classify_functions(functions)
     mapped_functions = map_functions(functions)
 
-    # -----------------------------
-    # Obfuscation / packing detection
-    # -----------------------------
     obfuscation = detect_obfuscation(r2, binary_path)
-
-    # -----------------------------
-    # Behavior flow & call graph
-    # -----------------------------
     behavior_flow = build_behavior_flow(functions)
+
     call_graph = build_call_graph(functions)
     call_graph_dot = export_dot(call_graph)
 
     # -----------------------------
-    # Risk assessment (behavior-driven)
+    # DYNAMIC ANALYSIS (STRACE)
+    # -----------------------------
+    try:
+        strace_output = run_with_strace(binary_path)
+        dynamic_findings = parse_syscalls(strace_output)
+    except Exception as e:
+        dynamic_findings = {}
+        print(f"[!] Dynamic analysis failed: {e}")
+
+    # -----------------------------
+    # HYBRID RISK SCORING
     # -----------------------------
     risk = score_risk(
         intents=intents,
         obfuscation=obfuscation,
-        behavior_flow=behavior_flow
+        behavior_flow=behavior_flow,
+        dynamic_findings=dynamic_findings
     )
 
     # -----------------------------
-    # Report generation (SINGLE EXIT POINT)
+    # BUILD REPORT (Single Exit)
     # -----------------------------
     report = build_report(
         binary_path=binary_path,
@@ -91,11 +104,41 @@ def analyze_binary(binary_path: str) -> dict:
             **risk,
             "obfuscation": obfuscation,
             "behavior_flow": behavior_flow
+        },
+        dynamic_analysis={
+            "syscall_findings": dynamic_findings,
+            "behavioral_risk": risk.get("dynamic_component", 0),
+            "behavioral_severity": risk.get("severity")
         }
     )
 
-    # -----------------------------
-    # Cleanup
-    # -----------------------------
     r2.quit()
     return report
+
+
+# ==========================================================
+# BATCH ANALYSIS
+# ==========================================================
+
+def analyze_all_samples():
+    results = {}
+
+    if not os.path.exists(SAMPLES_DIR):
+        print("Samples folder not found.")
+        return results
+
+    for filename in os.listdir(SAMPLES_DIR):
+        sample_path = os.path.join(SAMPLES_DIR, filename)
+
+        if not os.path.isfile(sample_path):
+            continue
+
+        print(f"\n[+] Hybrid Analyzing {filename}...")
+
+        try:
+            report = analyze_binary(sample_path)
+            results[filename] = report
+        except Exception as e:
+            results[filename] = {"error": str(e)}
+
+    return results
