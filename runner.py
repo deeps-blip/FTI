@@ -11,7 +11,7 @@ class RadareRunner:
         self.r2.cmd("e bin.cache=true")
 
     def analyze(self):
-        # Use aaaa for deeper analysis, but stable
+        # Stable deeper analysis
         self.r2.cmd("aaaa")
 
     def cmdj(self, command: str):
@@ -19,3 +19,25 @@ class RadareRunner:
 
     def quit(self):
         self.r2.quit()
+
+
+def main():
+    # IMPORT INSIDE FUNCTION (critical)
+    from analyzer import analyze_all_samples
+
+    results = analyze_all_samples()
+
+    for sample, data in results.items():
+        print("\n==============================")
+        print(f"Sample: {sample}")
+
+        if "error" in data:
+            print("Error:", data["error"])
+            continue
+
+        print("Findings:", data.get("findings"))
+        print("Behavioral Risk Score:", data.get("behavioral_risk"))
+
+
+if __name__ == "__main__":
+    main()
