@@ -1,176 +1,138 @@
-from pathlib import Path
-from datetime import datetime
-import json
+# ==========================================================
+# BEHAVIORAL CATEGORY WEIGHTS (from risk_mapper)
+# ==========================================================
 
-FEATURES_DIR = Path("data/features")
+CATEGORY_WEIGHTS = {
+    "network": 3,
+    "file_modification": 2,
+    "process_injection": 5,
+    "privilege": 4,
+    "execution": 1
+}
 
 
 # ==========================================================
-# TIMESTAMP
+# BEHAVIORAL RISK CALCULATION
 # ==========================================================
 
-def _current_timestamp():
-    return datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
+def calculate_behavioral_risk(findings):
+    score = 0
+
+    for category, count in findings.items():
+        weight = CATEGORY_WEIGHTS.get(category, 0)
+        score += weight * count
+
+    return min(score, 100)
 
 
 # ==========================================================
-# REPORT BUILDER
+# SEVERITY CLASSIFICATION
 # ==========================================================
 
-def build_report(
-    *,
-    binary_path: str,
-    metadata: dict,
-    data_targets: dict,
-    functions: list,
-    call_graph: str,
-    intents: list,
-    risk: dict,
-    dynamic_analysis: dict | None = None
-) -> dict:
+def classify_severity(score):
+    if score < 30:
+        return "low"
+    elif score < 60:
+        return "medium"
+    elif score < 80:
+        return "high"
+    else:
+        return "critical"
+
+
+# ==========================================================
+# MAIN HYBRID RISK SCORER
+# ==========================================================
+
+def score_risk(
+    intents,
+    obfuscation,
+    behavior_flow,
+    dynamic_findings=None   # NEW (optional)
+):
     """
-    Single authoritative report writer.
-    ALL artifacts are written ONLY here.
+    Hybrid static + behavioral risk scoring engine.
     """
 
-    # ----------------------------------------------------------
-    # Ensure output directory
-    # ----------------------------------------------------------
-    FEATURES_DIR.mkdir(parents=True, exist_ok=True)
+    static_score = 0
+    rationale = []
 
-    sample_name = Path(binary_path).name
-    timestamp = _current_timestamp()
+    # ------------------------------------------------
+    # Static Intent-Based Scoring
+    # ------------------------------------------------
 
-    report_dir = FEATURES_DIR / f"{sample_name}__{timestamp}"
-    report_dir.mkdir(exist_ok=False)
+    purposes = set()
+    for i in intents:
+        purposes.update(i.get("purposes", []))
 
-    # ==========================================================
-    # Metadata
-    # ==========================================================
+    if "network_communication" in purposes:
+        static_score += 30
+        rationale.append("Active network communication detected")
 
-    full_metadata = {
-        "binary_name": sample_name,
-        "analysis_timestamp_utc": timestamp,
-        "analysis_engine": "fti-hybrid-static-dynamic",
-        "schema_version": "1.5",
-        **metadata
-    }
+    if "persistence" in purposes:
+        static_score += 25
+        rationale.append("Persistence mechanisms identified")
 
-    # ==========================================================
-    # Threat Summary
-    # ==========================================================
+    if "credential_access" in purposes:
+        static_score += 30
+        rationale.append("Credential access behavior")
 
-    threat_summary = {
-        "verdict": risk.get("verdict"),
-        "risk_score": risk.get("score"),
-        "severity": risk.get("severity"),
-        "risk_model": risk.get("risk_model"),
-        "risk_rationale": risk.get("rationale", []),
-        "static_component": risk.get("static_component"),
-        "dynamic_component": risk.get("dynamic_component"),
-        "behavioral_intent": _collapse_intents(intents),
-        "critical_system_threat_functions": [
-            f for f in functions if f.get("critical_system_threat")
-        ]
-    }
+    if obfuscation.get("packed_or_obfuscated"):
+        static_score += 20
+        rationale.append("Binary appears packed or obfuscated")
 
-    # ----------------------------------------------------------
-    # Dynamic Summary
-    # ----------------------------------------------------------
-    if dynamic_analysis:
+    if behavior_flow:
+        static_score += 15
+        rationale.append("Clear execution behavior flow detected")
 
-        findings = dynamic_analysis.get("syscall_findings", {})
+    # ------------------------------------------------
+    # Dynamic Behavioral Scoring (if available)
+    # ------------------------------------------------
 
-        threat_summary["dynamic_behavior"] = {
-            "behavioral_risk_score": dynamic_analysis.get("behavioral_risk"),
-            "behavioral_severity": dynamic_analysis.get("behavioral_severity"),
-            "observed_syscall_categories": [
-                category for category, count in findings.items()
-                if isinstance(count, int) and count > 0
-            ],
-            "raw_syscall_counts": findings,
-            "behavior_explanations": dynamic_analysis.get("explanations", [])
-        }
+    dynamic_score = 0
 
-    # ==========================================================
-    # Full Analysis (Deep View)
-    # ==========================================================
+    if dynamic_findings:
+        dynamic_score = calculate_behavioral_risk(dynamic_findings)
 
-    analysis = {
-        "file_metadata": full_metadata,
-        "data_targets": data_targets,
-        "functions": functions,
-        "intents": intents,
-        "behavior_flow": risk.get("behavior_flow"),
-        "obfuscation": risk.get("obfuscation"),
-        "call_graph_dot": call_graph,
-        "risk_assessment": risk,
-        "dynamic_analysis": dynamic_analysis
-    }
+        if dynamic_findings.get("network", 0) > 0:
+            rationale.append("Runtime outbound network activity observed")
 
-    # ==========================================================
-    # Write Core Artifacts
-    # ==========================================================
+        if dynamic_findings.get("process_injection", 0) > 0:
+            rationale.append("Runtime process manipulation observed")
 
-    (report_dir / "metadata.json").write_text(
-        json.dumps(full_metadata, indent=2)
+        if dynamic_findings.get("privilege", 0) > 0:
+            rationale.append("Runtime privilege escalation attempt")
+
+    # ------------------------------------------------
+    # Hybrid Risk Fusion
+    # ------------------------------------------------
+
+    if dynamic_findings:
+        # 60% static + 40% dynamic weighting
+        final_score = round((static_score * 0.6) + (dynamic_score * 0.4))
+        risk_model = "hybrid_static_dynamic_v1"
+    else:
+        final_score = static_score
+        risk_model = "static_only_v1"
+
+    # ------------------------------------------------
+    # Verdict Logic
+    # ------------------------------------------------
+
+    verdict = (
+        "high_risk_malware" if final_score >= 70 else
+        "suspicious_artifact" if final_score >= 40 else
+        "low_confidence_threat"
     )
 
-    (report_dir / "threat_summary.json").write_text(
-        json.dumps(threat_summary, indent=2)
-    )
-
-    (report_dir / "analysis.json").write_text(
-        json.dumps(analysis, indent=2)
-    )
-
-    (report_dir / "functions.json").write_text(
-        json.dumps(
-            {
-                "function_count": len(functions),
-                "functions": functions
-            },
-            indent=2
-        )
-    )
-
-    (report_dir / "callgraph.dot").write_text(call_graph)
-
-    # ==========================================================
-    # NEW: Separate Dynamic Dump
-    # ==========================================================
-
-    if dynamic_analysis:
-        (report_dir / "dynamic_analysis.json").write_text(
-            json.dumps(dynamic_analysis, indent=2)
-        )
-
-    # ==========================================================
-    # Return Summary
-    # ==========================================================
+    severity = classify_severity(final_score)
 
     return {
-        "report_path": str(report_dir),
-        "verdict": threat_summary["verdict"],
-        "risk_score": threat_summary["risk_score"],
-        "severity": threat_summary.get("severity")
-    }
-
-
-# ==========================================================
-# INTENT COLLAPSER
-# ==========================================================
-
-def _collapse_intents(intents):
-    summary = {}
-
-    for item in intents:
-        for purpose in item.get("purposes", []):
-            summary[purpose] = summary.get(purpose, 0) + 1
-
-    return {
-        "observed_function_purposes": list(summary.keys()),
-        "dominant_behaviors": [
-            k for k, v in summary.items() if v >= 2
-        ]
+        "score": final_score,
+        "severity": severity,
+        "verdict": verdict,
+        "rationale": rationale,
+        "risk_model": risk_model,
+        "static_component": static_score,
+        "dynamic_component": dynamic_score
     }
