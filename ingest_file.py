@@ -22,7 +22,7 @@ from sandbox.sandbox_manager import initialize_sandbox
 from analyzer import analyze_binary
 
 
-SAMPLES_DIR = "data/samples"
+SAMPLES_DIR = "/sandbox/malware"
 
 
 # -----------------------------
