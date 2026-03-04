@@ -15,13 +15,11 @@ services:
       - ./:/app
 
       # Malware samples (READ-ONLY for safety)
-      - ./data/samples:/app/data/samples:ro
+      - ./data/samples:/app/data/samples
 
       # Generated features & reports (WRITEABLE, persisted)
       - ./data/features:/app/data/features
 
-    # Explicit command (clear intent)
-    command: python ingest_file.py
 
     # Disable network for malware safety (OPTIONAL but recommended)
     network_mode: "none"
