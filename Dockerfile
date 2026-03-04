@@ -1,8 +1,6 @@
-FROM python:3.11
+FROM python:3.11-slim
 
-# -----------------------------
-# Install build dependencies
-# -----------------------------
+# Install dependencies
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -11,30 +9,30 @@ RUN apt-get update && apt-get install -y \
     file \
     binutils \
     pkg-config \
+    strace \
     && rm -rf /var/lib/apt/lists/*
 
-# -----------------------------
-# Install radare2 (official)
-# -----------------------------
-RUN git clone https://github.com/radareorg/radare2.git /opt/radare2 && \
+# Install radare2
+RUN git clone --depth 1 https://github.com/radareorg/radare2.git /opt/radare2 && \
     cd /opt/radare2 && \
-    sys/install.sh && \
-    r2 -v
+    sys/install.sh
 
-# -----------------------------
-# Set working directory
-# -----------------------------
+# Create directories
+RUN mkdir -p /sandbox/malware
+RUN mkdir -p /app/data/features
+
 WORKDIR /app
 
-# -----------------------------
 # Install Python deps
-# -----------------------------
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# -----------------------------
-# Copy app
-# -----------------------------
+# Copy application
 COPY . .
 
-CMD ["python", "ingest_file.py"]
+# Add ingestion entrypoint
+COPY docker_entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD [ "python", "ingest_file.py" ]
