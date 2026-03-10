@@ -1,13 +1,23 @@
 version: "3.8"
 
+networks:
+  fti-network:
+    driver: bridge
+
 services:
   intake:
     build: .
     image: fti-intake
-    container_name: fti-intake
+    container_name: fti-backend
+    networks:
+      - fti-network
 
     # Run from project root inside container
     working_dir: /app
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=AIzaSyCeLzfc8X5RThBziVIYb2e5zllZUEIkxJw
 
     # Volumes (MOST IMPORTANT PART)
     volumes:
@@ -22,4 +32,17 @@ services:
 
 
     # Disable network for malware safety (OPTIONAL but recommended)
-    network_mode: "none"
+    # network_mode: "none"
+
+  frontend:
+    build: ./frontend
+    container_name: fti-frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - fti-network
+    depends_on:
+      - intake
