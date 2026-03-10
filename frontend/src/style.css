@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+:root {
+    --terminal-blue: #00aaff;
+    --terminal-bg: #0a0a0a;
+}
+
+body {
+    background-color: var(--terminal-bg);
+    color: var(--terminal-blue);
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.3);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #000;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--terminal-blue);
+}
+
+/* Tree Navigation */
+.tree-item {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tree-item:hover {
+    background-color: rgba(0, 170, 255, 0.1);
+    padding-left: 4px;
+}
+.tree-item.active {
+    background-color: var(--terminal-blue);
+    color: black;
+    font-weight: bold;
+}
+.tree-item .toggle {
+    display: inline-block;
+    width: 1.5rem;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.animate-blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 170, 255, 0.1);
+    border-left-color: var(--terminal-blue);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Module Visibility */
+.module {
+    display: none;
+}
+.module.active {
+    display: block;
+}
+
+/* Terminal Lines */
+.line {
+    margin-bottom: 2px;
+    word-break: break-all;
+}
+.line.error {
+    color: #ff4444;
+}
+.line.success {
+    color: #00aaff;
+    font-weight: bold;
+}
+.line.info {
+    color: #44aaff;
+}
+
+/* ASCII Border Effect */
+.ascii-header {
+    font-family: monospace;
+    white-space: pre;
+}
+
+/* Buttons */
+.retro-btn {
+    border: 1px solid var(--terminal-blue);
+    padding: 8px 16px;
+    background: transparent;
+    color: var(--terminal-blue);
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+}
+.retro-btn:hover {
+    background-color: var(--terminal-blue);
+    color: black;
+}
+.retro-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+.sample-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid rgba(0, 170, 255, 0.3);
+    background: rgba(0, 170, 255, 0.08);
+    cursor: pointer;
+    transition: all 0.2s;
+    min-height: 100px;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.sample-icon:hover {
+    background: rgba(0, 170, 255, 0.2);
+    border-color: var(--terminal-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 170, 255, 0.2);
+}
+
+.sample-name {
+    font-size: 11px;
+    text-align: center;
+    word-break: break-all;
+    max-width: 100%;
+    color: white;
+    margin-top: 8px;
+    line-height: 1.3;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
