@@ -17,7 +17,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - GEMINI_API_KEY=AIzaSyCeLzfc8X5RThBziVIYb2e5zllZUEIkxJw
+      - GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 
     # Volumes (MOST IMPORTANT PART)
     volumes:
