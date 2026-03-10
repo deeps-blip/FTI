@@ -178,29 +178,29 @@ async def generate_report(sample_id: str):
     if not analysis:
         raise HTTPException(status_code=404, detail="Analysis data not found")
 
-    # Prune analysis data for Gemini (limit size/registry_keys)
+    # Aggressive pruning for Gemini (minimal token usage)
     pruned_data = {
-        "file_metadata": analysis.get("file_metadata"),
-        "data_targets": analysis.get("data_targets"),
-        "threat_summary": load_json(os.path.join(path, "threat_summary.json"))
+        "metadata": {
+            "name": analysis.get("file_metadata", {}).get("binary_name"),
+            "size": analysis.get("file_metadata", {}).get("size_bytes"),
+            "entropy": analysis.get("file_metadata", {}).get("entropy")
+        },
+        "targets": {
+            "urls": analysis.get("data_targets", {}).get("urls", [])[:3],
+            "files": analysis.get("data_targets", {}).get("files", [])[:3],
+            "keys": analysis.get("data_targets", {}).get("registry_keys", [])[:3]
+        },
+        "verdict": load_json(os.path.join(path, "threat_summary.json")).get("verdict")
     }
 
     try:
-        prompt = f"Analyze the following malware analysis data and provide a concise threat report. Focus on registry keys, data targets, and severity. Use a professional, technical tone.\n\nJSON DATA: {json.dumps(pruned_data)}"
+        prompt = f"Analyze malware data. Summarize threat level and key indicators (URLs/Keys). Be extremely concise.\nDATA: {json.dumps(pruned_data)}"
         
-        # Try gemini-2.0-flash first
-        try:
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=prompt
-            )
-        except Exception as e:
-            logger.warning(f"Failed with gemini-2.0-flash: {e}. Retrying with gemini-1.5-flash.")
-            response = client.models.generate_content(
-                model="gemini-1.5-flash",
-                contents=prompt
-            )
+        response = client.models.generate_content(
+            model="gemini-3-flash-preview",
+            contents=prompt,
             
+        )
         report_text = response.text
         
         # Save report for download
