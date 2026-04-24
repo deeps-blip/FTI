@@ -1,0 +1,2993 @@
+{
+  "file_metadata": {
+    "binary_name": "wildfire-test-pe-file.exe",
+    "analysis_timestamp_utc": "2026-03-09_16-42-38",
+    "analysis_engine": "fti-hybrid-static-dynamic",
+    "schema_version": "1.5",
+    "md5": "c5722bb5480f32b4229ab66a3503fce1",
+    "sha1": "5f632f4ace1377fc810c0823bafddbe393c4e614",
+    "sha256": "622c60345e7aa5370d71b07e88bb961713a7427d1ba7a76639d550b6561cf82e",
+    "size_bytes": 55296,
+    "entropy": 6.032,
+    "architecture": "x86",
+    "format": null
+  },
+  "data_targets": {
+    "urls": [],
+    "files": [],
+    "registry_keys": []
+  },
+  "functions": [
+    {
+      "function": "entry0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "main",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401000",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401264",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004011a8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401134",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040127b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401b1c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403ff4",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401aca",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401a9d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004017ad",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040177c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004015bc",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401ada",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401756",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401692",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401d20",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401d65",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401c3c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004010c7",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004011a0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401caf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040510c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004021a6",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004022e0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401f0f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040125a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401b65",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401c7d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004051e5",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405123",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004034ec",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004036df",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403530",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004034b8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403362",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00402432",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040260b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004024ce",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040130f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401ceb",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040324a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040321f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404331",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401322",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004041b6",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403f01",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403274",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403ebb",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407392",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401940",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407383",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407374",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040716f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040715e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040506b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004052df",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403f3e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403fe0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406981",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403fe9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403e6f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403c2a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403b93",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403ad8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403862",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004032cb",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004034a2",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004034ce",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403718",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004034dd",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040434f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004043ea",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004044f9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401b2f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404473",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401b42",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404562",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004015f6",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040174e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404601",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404ebe",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040185d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404f92",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401815",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004018ff",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040192e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405220",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004014b6",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004010b8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040194f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401a78",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401937",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405379",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004023d2",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004054b0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405420",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405460",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00402402",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sub.KERNEL32.dll_RtlUnwind",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040241b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004023e9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004060ee",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405fa2",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00402502",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004087a7",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405f88",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405d84",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405d64",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405ca0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040529a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004022d0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406225",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406244",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406247",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040406d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406c41",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004064c0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406cba",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00402589",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040703b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406f0b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406e80",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406e64",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407090",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004025b8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407125",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040950c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406e41",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004032a7",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004074ec",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004074b0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403262",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004073c9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004074e6",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040326b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040350a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040782f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004077cc",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004077b1",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004076e4",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040766f",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407503",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406963",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004067c9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040786e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407920",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004078cd",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040393e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00403ecd",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004041a1",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406a10",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406aa9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004041ad",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004045f8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004046fa",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004047b8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407af0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040797a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407073",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407021",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407938",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004047c1",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404f8a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405063",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004051dc",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407be5",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407c79",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004073a1",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407cfb",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040540c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408645",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00404628",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004043f2",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408515",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407f5e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407da8",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040556c",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00405d36",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409a20",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408754",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406175",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408b9b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408ab4",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408a6e",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408887",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040655b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406564",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004062cc",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040629d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406330",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004065e0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040692a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408fbb",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408f52",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408bdb",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406bf4",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406cae",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004094e6",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409391",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040922d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004090b9",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040718d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407338",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004098a1",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040532b",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004098d4",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00407adf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040858a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0040990a",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408672",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409a90",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00408867",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409abc",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004079ff",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004071c4",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004071d1",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409c08",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.0041025d",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00401d80",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.004031cf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00406110",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409540",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409cc0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "fcn.00409da0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    }
+  ],
+  "intents": [
+    {
+      "function": "entry0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "main",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401000",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401264",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004011a8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401134",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040127b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401b1c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403ff4",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401aca",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401a9d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004017ad",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040177c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004015bc",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401ada",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401756",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401692",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401d20",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401d65",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401c3c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004010c7",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004011a0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401caf",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040510c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004021a6",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004022e0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401f0f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040125a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401b65",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401c7d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004051e5",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405123",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004034ec",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004036df",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403530",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004034b8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403362",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00402432",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040260b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004024ce",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040130f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401ceb",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040324a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040321f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404331",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401322",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004041b6",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403f01",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403274",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403ebb",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407392",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401940",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407383",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407374",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040716f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040715e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040506b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004052df",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403f3e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403fe0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406981",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403fe9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403e6f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403c2a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403b93",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403ad8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403862",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004032cb",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004034a2",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004034ce",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403718",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004034dd",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040434f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004043ea",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004044f9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401b2f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404473",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401b42",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404562",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004015f6",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040174e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404601",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404ebe",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040185d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404f92",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401815",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004018ff",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040192e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405220",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004014b6",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004010b8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040194f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401a78",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401937",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405379",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004023d2",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004054b0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405420",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405460",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00402402",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sub.KERNEL32.dll_RtlUnwind",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040241b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004023e9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004060ee",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405fa2",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00402502",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004087a7",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405f88",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405d84",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405d64",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405ca0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040529a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004022d0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406225",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406244",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406247",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040406d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406c41",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004064c0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406cba",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00402589",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040703b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406f0b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406e80",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406e64",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407090",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004025b8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407125",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040950c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406e41",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004032a7",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004074ec",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004074b0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403262",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004073c9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004074e6",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040326b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040350a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040782f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004077cc",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004077b1",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004076e4",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040766f",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407503",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406963",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004067c9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040786e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407920",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004078cd",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040393e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00403ecd",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004041a1",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406a10",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406aa9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004041ad",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004045f8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004046fa",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004047b8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407af0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040797a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407073",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407021",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407938",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004047c1",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404f8a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405063",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004051dc",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407be5",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407c79",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004073a1",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407cfb",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040540c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408645",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00404628",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004043f2",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408515",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407f5e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407da8",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040556c",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00405d36",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409a20",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408754",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406175",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408b9b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408ab4",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408a6e",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408887",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040655b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406564",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004062cc",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040629d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406330",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004065e0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040692a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408fbb",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408f52",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408bdb",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406bf4",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406cae",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004094e6",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409391",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040922d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004090b9",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040718d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407338",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004098a1",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040532b",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004098d4",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00407adf",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040858a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0040990a",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408672",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409a90",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00408867",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409abc",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004079ff",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004071c4",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004071d1",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409c08",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.0041025d",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00401d80",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.004031cf",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00406110",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409540",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409cc0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "fcn.00409da0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    }
+  ],
+  "behavior_flow": [],
+  "obfuscation": {
+    "packed_or_obfuscated": false,
+    "high_entropy_sections": []
+  },
+  "call_graph_dot": "digraph malware_call_graph {\n}",
+  "risk_assessment": {
+    "score": 0,
+    "severity": "low",
+    "verdict": "low_confidence_threat",
+    "rationale": [],
+    "risk_model": "hybrid_static_dynamic_v1",
+    "static_component": 0,
+    "dynamic_component": 1,
+    "obfuscation": {
+      "packed_or_obfuscated": false,
+      "high_entropy_sections": []
+    },
+    "behavior_flow": []
+  },
+  "dynamic_analysis": {
+    "syscall_findings": {
+      "network": 0,
+      "file_modification": 0,
+      "process_injection": 0,
+      "privilege": 0,
+      "execution": 1
+    },
+    "behavioral_risk": 1,
+    "behavioral_severity": "low"
+  }
+}

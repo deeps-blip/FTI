@@ -1,0 +1,12 @@
+{
+  "function_count": 1,
+  "functions": [
+    {
+      "function": "fcn.00000000",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    }
+  ]
+}

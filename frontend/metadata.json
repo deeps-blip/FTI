@@ -1,0 +1,5 @@
+{
+  "name": "MalwareLab Retro Console",
+  "description": "A retro-style malware analysis workstation with directory-based navigation and terminal output.",
+  "requestFramePermissions": []
+}

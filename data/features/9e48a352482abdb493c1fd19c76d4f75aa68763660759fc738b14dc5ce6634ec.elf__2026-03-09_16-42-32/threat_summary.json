@@ -1,0 +1,37 @@
+{
+  "verdict": "low_confidence_threat",
+  "risk_score": 18,
+  "severity": "low",
+  "risk_model": "hybrid_static_dynamic_v1",
+  "risk_rationale": [
+    "Runtime outbound network activity observed"
+  ],
+  "static_component": 0,
+  "dynamic_component": 45,
+  "behavioral_intent": {
+    "observed_function_purposes": [
+      "control_or_dispatch"
+    ],
+    "dominant_behaviors": [
+      "control_or_dispatch"
+    ]
+  },
+  "critical_system_threat_functions": [],
+  "dynamic_behavior": {
+    "behavioral_risk_score": 45,
+    "behavioral_severity": "low",
+    "observed_syscall_categories": [
+      "network",
+      "file_modification",
+      "execution"
+    ],
+    "raw_syscall_counts": {
+      "network": 9,
+      "file_modification": 6,
+      "process_injection": 0,
+      "privilege": 0,
+      "execution": 6
+    },
+    "behavior_explanations": []
+  }
+}

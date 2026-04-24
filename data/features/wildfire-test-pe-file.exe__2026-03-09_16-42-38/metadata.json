@@ -1,0 +1,13 @@
+{
+  "binary_name": "wildfire-test-pe-file.exe",
+  "analysis_timestamp_utc": "2026-03-09_16-42-38",
+  "analysis_engine": "fti-hybrid-static-dynamic",
+  "schema_version": "1.5",
+  "md5": "c5722bb5480f32b4229ab66a3503fce1",
+  "sha1": "5f632f4ace1377fc810c0823bafddbe393c4e614",
+  "sha256": "622c60345e7aa5370d71b07e88bb961713a7427d1ba7a76639d550b6561cf82e",
+  "size_bytes": 55296,
+  "entropy": 6.032,
+  "architecture": "x86",
+  "format": null
+}

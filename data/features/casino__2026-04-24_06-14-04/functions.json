@@ -1,0 +1,124 @@
+{
+  "function_count": 17,
+  "functions": [
+    {
+      "function": "sym.imp.puts",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.printf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.srand",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.__isoc99_scanf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.exit",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.rand",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.__cxa_finalize",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.deregister_tm_clones",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.register_tm_clones",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry.fini0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry.init0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym._init",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.__libc_csu_fini",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym._fini",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.__libc_csu_init",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "main",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    }
+  ]
+}

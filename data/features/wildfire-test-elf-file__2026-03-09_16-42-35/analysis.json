@@ -1,0 +1,237 @@
+{
+  "file_metadata": {
+    "binary_name": "wildfire-test-elf-file",
+    "analysis_timestamp_utc": "2026-03-09_16-42-35",
+    "analysis_engine": "fti-hybrid-static-dynamic",
+    "schema_version": "1.5",
+    "md5": "a18212a8940f08cb8b2aa8172d49e243",
+    "sha1": "47fabb1b21c07c216038129bf7ce31ca2c029b16",
+    "sha256": "98a32b587e28f4e305007c6bed09d00c9f1d3e383eaa561ad356bc83114c7f0d",
+    "size_bytes": 8608,
+    "entropy": 2.879,
+    "architecture": null,
+    "format": null
+  },
+  "data_targets": {
+    "urls": [],
+    "files": [],
+    "registry_keys": []
+  },
+  "functions": [
+    {
+      "function": "sym.imp.puts",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.__libc_start_main",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.sleep",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.deregister_tm_clones",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.register_tm_clones",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry.fini0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry.init0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.__libc_csu_fini",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym._fini",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.__libc_csu_init",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "main",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym._init",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "loc.imp.__gmon_start__",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    }
+  ],
+  "intents": [
+    {
+      "function": "sym.imp.puts",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.__libc_start_main",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.sleep",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "entry0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.deregister_tm_clones",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.register_tm_clones",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "entry.fini0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "entry.init0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.__libc_csu_fini",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym._fini",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.__libc_csu_init",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "main",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym._init",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "loc.imp.__gmon_start__",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    }
+  ],
+  "behavior_flow": [],
+  "obfuscation": {
+    "packed_or_obfuscated": false,
+    "high_entropy_sections": []
+  },
+  "call_graph_dot": "digraph malware_call_graph {\n}",
+  "risk_assessment": {
+    "score": 0,
+    "severity": "low",
+    "verdict": "low_confidence_threat",
+    "rationale": [],
+    "risk_model": "hybrid_static_dynamic_v1",
+    "static_component": 0,
+    "dynamic_component": 1,
+    "obfuscation": {
+      "packed_or_obfuscated": false,
+      "high_entropy_sections": []
+    },
+    "behavior_flow": []
+  },
+  "dynamic_analysis": {
+    "syscall_findings": {
+      "network": 0,
+      "file_modification": 0,
+      "process_injection": 0,
+      "privilege": 0,
+      "execution": 1
+    },
+    "behavioral_risk": 1,
+    "behavioral_severity": "low"
+  }
+}

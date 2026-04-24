@@ -1,0 +1,34 @@
+{
+  "verdict": "low_confidence_threat",
+  "risk_score": 1,
+  "severity": "low",
+  "risk_model": "hybrid_static_dynamic_v1",
+  "risk_rationale": [],
+  "static_component": 0,
+  "dynamic_component": 3,
+  "behavioral_intent": {
+    "observed_function_purposes": [
+      "control_or_dispatch"
+    ],
+    "dominant_behaviors": [
+      "control_or_dispatch"
+    ]
+  },
+  "critical_system_threat_functions": [],
+  "dynamic_behavior": {
+    "behavioral_risk_score": 3,
+    "behavioral_severity": "low",
+    "observed_syscall_categories": [
+      "file_modification",
+      "execution"
+    ],
+    "raw_syscall_counts": {
+      "network": 0,
+      "file_modification": 1,
+      "process_injection": 0,
+      "privilege": 0,
+      "execution": 1
+    },
+    "behavior_explanations": []
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "file_metadata": {
+    "binary_name": "casino",
+    "analysis_timestamp_utc": "2026-04-01_17-09-07",
+    "analysis_engine": "fti-hybrid-static-dynamic",
+    "schema_version": "1.5",
+    "md5": "0478c3a259655afcd1cc67e808c20861",
+    "sha1": "91cc879220bf6b21edb1bd38ad0a959fbba49ae0",
+    "sha256": "b93bef52fd4178d7914752d87bf0b5ca2b93fcbd9d76a668cd68c8f873169257",
+    "size_bytes": 17064,
+    "entropy": 1.995,
+    "architecture": "x86",
+    "format": null
+  },
+  "data_targets": {
+    "urls": [],
+    "files": [],
+    "registry_keys": []
+  },
+  "functions": [
+    {
+      "function": "sym.imp.puts",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.printf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.srand",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.__isoc99_scanf",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.exit",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.rand",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.imp.__cxa_finalize",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.deregister_tm_clones",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.register_tm_clones",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry.fini0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "entry.init0",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym._init",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.__libc_csu_fini",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym._fini",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "sym.__libc_csu_init",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    },
+    {
+      "function": "main",
+      "behaviors": [
+        "control_or_dispatch"
+      ],
+      "critical_system_threat": false
+    }
+  ],
+  "intents": [
+    {
+      "function": "sym.imp.puts",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.printf",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.srand",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.__isoc99_scanf",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.exit",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.rand",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.imp.__cxa_finalize",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "entry0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.deregister_tm_clones",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.register_tm_clones",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "entry.fini0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "entry.init0",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym._init",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.__libc_csu_fini",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym._fini",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "sym.__libc_csu_init",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    },
+    {
+      "function": "main",
+      "purposes": [
+        "control_or_dispatch"
+      ]
+    }
+  ],
+  "behavior_flow": [],
+  "obfuscation": {
+    "packed_or_obfuscated": false,
+    "high_entropy_sections": []
+  },
+  "call_graph_dot": "digraph malware_call_graph {\n}",
+  "risk_assessment": {
+    "score": 1,
+    "severity": "low",
+    "verdict": "low_confidence_threat",
+    "rationale": [],
+    "risk_model": "hybrid_static_dynamic_v1",
+    "static_component": 0,
+    "dynamic_component": 3,
+    "obfuscation": {
+      "packed_or_obfuscated": false,
+      "high_entropy_sections": []
+    },
+    "behavior_flow": []
+  },
+  "dynamic_analysis": {
+    "syscall_findings": {
+      "network": 0,
+      "file_modification": 1,
+      "process_injection": 0,
+      "privilege": 0,
+      "execution": 1
+    },
+    "behavioral_risk": 3,
+    "behavioral_severity": "low"
+  }
+}

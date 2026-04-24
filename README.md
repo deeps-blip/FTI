@@ -1,169 +1,97 @@
 # Federated Threat Intelligence (FTI)
 
-Federated Threat Intelligence (FTI) is a **modular static malware analysis framework** built using **Python** and **radare2**.  
-It focuses on **reliable function discovery, metadata extraction, and structured report generation** in a reproducible local or containerized environment.
+Federated Threat Intelligence (FTI) is a **modular hybrid malware analysis framework** designed for deep binary inspection and automated threat research. It combines static analysis using **radare2** with dynamic execution monitoring via **strace**, providing a comprehensive intelligence baseline enhanced by **Gemini-powered AI insights**.
 
-FTI is designed as a **foundation for collaborative and federated threat intelligence research**, prioritizing stability, determinism, and clean architecture over aggressive or speculative analysis.
-
----
-
-## Key Objectives
-
-- Provide a **stable static analysis pipeline** for malware samples
-- Extract **verifiable features** suitable for downstream intelligence tasks
-- Ensure **deterministic behavior** across local and Docker executions
-- Act as a **baseline platform** for future federated learning integration
+FTI serves as a robust foundation for collaborative threat research, prioritizing reproducibility, clean architecture, and deterministic analysis.
 
 ---
 
-## Features
+## 🏗️ Architecture
 
-- Static malware analysis using **radare2**
-- Reliable function enumeration (`aflj`)
-- Cryptographic file metadata extraction:
-  - MD5
-  - SHA1
-  - SHA256
-- File size and entropy calculation
-- Structured JSON reporting
-- Timestamped feature directories per sample
-- Dockerized execution for reproducibility
-- Clear separation of concerns across modules
+FTI operates as a containerized microservices ecosystem, ensuring isolation and consistent performance across environments.
 
----
-
-## Analysis Pipeline
-
-1. **Sample ingestion**
-   - Reads binaries from `data/samples/`
-2. **Static analysis**
-   - Loads binary using radare2
-   - Performs basic analysis (`aa`)
-3. **Function extraction**
-   - Enumerates discovered functions
-4. **Metadata extraction**
-   - Hashes, size, entropy
-5. **Report generation**
-   - Writes structured JSON output to `data/features/`
-
-Each sample generates a **dedicated, timestamped report directory**.
-
----
-
-## Output Format
-
- <sample.exe>_{timestamp}/ under the features folder in the data folder
-
-
-### Example `analysis.json`
-
-```json
-{
-  "file_metadata": {
-    "binary_name": "sample.exe",
-    "md5": "…",
-    "sha1": "…",
-    "sha256": "…",
-    "size_bytes": 55296,
-    "entropy": 6.03
-  },
-  "functions": [
-    {
-      "name": "entry0",
-      "offset": 4198400
-    }
-  ],
-  "risk": {
-    "verdict": "baseline_analysis",
-    "score": 0
-  }
-}
-
+```mermaid
+graph TD
+    subgraph "Dockerized Environment"
+        A[Data/Samples] -->|Ingestion| B(Intake Service)
+        B -->|Hybrid Analysis| C[Data/Features]
+        C -->|Static/Dynamic Logs| D(FastAPI Backend)
+        D -->|AI Enrichment| E(Gemini 1.5 Flash)
+        D -->|REST API| F(Vite/Retro Frontend)
+    end
+    F -->|User Dashboard| G[Security Researcher]
 ```
-### Getting Started (Local)
-Requirements
 
-Python 3.11 or 3.12 (recommended)
-
-radare2
-
-r2pipe
 ---
-# Installation
+
+## 🚀 Key Features
+
+### 🔍 Hybrid Analysis Pipeline
+- **Static Analysis**: Powered by **radare2** for reliable function discovery (`aflj`), metadata extraction (MD5, SHA1, SHA256), and entropy calculation.
+- **Dynamic Analysis**: Automated execution monitoring using **strace** to capture system calls and observe runtime behavior.
+- **Behavioral Risk Scoring**: Intelligent mapping of syscalls and function patterns to severity levels.
+
+### 🤖 AI-Powered Intelligence
+- **Gemini Integration**: Automated threat summarization and contextual analysis of findings.
+- **Smart Reports**: Generates concise, human-readable intelligence reports from complex technical data.
+- **Downloadable Artifacts**: One-click export of AI-generated threat reports.
+
+### 🖥️ Interactive Dashboard
+- **Retro-Terminal UI**: A high-performance, Vite-powered web interface with a terminal aesthetic.
+- **Real-Time Visualization**: Browse analyzed samples, run detailed scans, and view logs in an immersive console.
+- **Live Monitoring**: Track analysis status and system health directly from the dashboard.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- **Docker** & **Docker Compose**
+- **Gemini API Key** (for AI features)
+
+### One-Command Deployment
+The easiest way to start the FTI stack is using the provided `start.sh` script:
+
 ```bash
-pip install -r requirements.txt
-```
----
-# Run Analysis
-```bash
-python ingest_file.py
+chmod +x start.sh
+./start.sh
 ```
 
-# Reports will be written to:
-```bash
-data/features/
-```
----
-# Docker Usage
--Build and Run
+Alternatively, run via Docker Compose:
 ```bash
 docker compose up --build
 ```
----
-## Notes
 
-- `data/samples` and `data/features` are mounted as Docker volumes
-- Generated reports persist on the host filesystem
-- Docker ensures reproducible and isolated execution environments
+### Accessing the Dashboard
+Once the services are healthy, open your browser to:
+**[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-## Known Limitations
+## 📁 Data Structure
 
-- Static analysis only (no dynamic execution)
-- Packed or heavily obfuscated binaries may yield limited results
-- Function semantics are not yet inferred
-- Federated learning is planned but not yet implemented
+- `data/samples/`: Place your malware binaries here for analysis.
+- `data/features/`: Persisted analysis results, including JSON metadata and AI reports.
 
 ---
 
-## Roadmap
+## 🔌 API Reference (FastAPI)
 
-- Function behavior classification
-- Call graph generation
-- Feature normalization for federated learning
-- Command-line interface (CLI)
-- Regression and stability testing
-- Report schema versioning
+The backend provides a comprehensive REST API at `http://localhost:8000`:
 
----
-
-## Design Principles
-
-- Stability over aggressiveness
-- Deterministic analysis
-- Minimal assumptions
-- Clear module boundaries
-- Reports are always generated or fail loudly
-
-This project intentionally avoids experimental analysis until a strong and reliable baseline is established.
+- `GET /samples`: List all processed samples.
+- `GET /samples/{id}/summary`: Retrieve metadata and threat overview.
+- `GET /samples/{id}/analysis/static/functions`: Get detailed function maps.
+- `POST /samples/{id}/report`: Trigger Gemini AI report generation.
 
 ---
 
-## License
-
-This project is provided for **research and educational purposes only**.  
-Users are responsible for ensuring compliance with applicable laws when handling malware samples.
+## 🧪 Design Principles
+- **Isolation**: All analysis occurs within Docker containers for host safety.
+- **Reproducibility**: Identical outputs across different machines.
+- **Extensibility**: Modular extractor system for adding new analysis layers.
 
 ---
 
-## Contributions
-
-Contributions are welcome, especially in the areas of:
-
-- Static analysis improvements
-- Report schema enhancements
-- Testing and validation
-- Documentation
-
-Please open an issue or submit a pull request.
+## ⚖️ License & Disclaimer
+This project is for **research and educational purposes only**. Handling malware carries inherent risks. Users are responsible for ensuring compliance with all local and international laws.

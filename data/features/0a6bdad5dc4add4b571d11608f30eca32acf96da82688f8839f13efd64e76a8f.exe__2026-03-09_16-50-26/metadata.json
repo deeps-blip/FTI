@@ -1,0 +1,13 @@
+{
+  "binary_name": "0a6bdad5dc4add4b571d11608f30eca32acf96da82688f8839f13efd64e76a8f.exe",
+  "analysis_timestamp_utc": "2026-03-09_16-50-26",
+  "analysis_engine": "fti-hybrid-static-dynamic",
+  "schema_version": "1.5",
+  "md5": "0a437cfc4736d2285ba95abf683ea298",
+  "sha1": "7f8a49580c6daeadc2a2dca89222b4153e729208",
+  "sha256": "0a6bdad5dc4add4b571d11608f30eca32acf96da82688f8839f13efd64e76a8f",
+  "size_bytes": 10747392,
+  "entropy": 7.934,
+  "architecture": "x86",
+  "format": null
+}

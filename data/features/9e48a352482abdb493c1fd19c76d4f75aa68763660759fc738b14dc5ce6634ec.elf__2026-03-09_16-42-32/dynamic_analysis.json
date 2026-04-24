@@ -1,0 +1,11 @@
+{
+  "syscall_findings": {
+    "network": 9,
+    "file_modification": 6,
+    "process_injection": 0,
+    "privilege": 0,
+    "execution": 6
+  },
+  "behavioral_risk": 45,
+  "behavioral_severity": "low"
+}

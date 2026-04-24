@@ -1,0 +1,53 @@
+{
+  "file_metadata": {
+    "binary_name": "tester.sh",
+    "analysis_timestamp_utc": "2026-03-10_13-11-35",
+    "analysis_engine": "fti-hybrid-static-dynamic",
+    "schema_version": "1.5",
+    "md5": "d41d8cd98f00b204e9800998ecf8427e",
+    "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0,
+    "entropy": 0.0,
+    "architecture": null,
+    "format": null
+  },
+  "data_targets": {
+    "urls": [],
+    "files": [],
+    "registry_keys": []
+  },
+  "functions": [],
+  "intents": [],
+  "behavior_flow": [],
+  "obfuscation": {
+    "packed_or_obfuscated": false,
+    "high_entropy_sections": []
+  },
+  "call_graph_dot": "digraph malware_call_graph {\n}",
+  "risk_assessment": {
+    "score": 0,
+    "severity": "low",
+    "verdict": "low_confidence_threat",
+    "rationale": [],
+    "risk_model": "hybrid_static_dynamic_v1",
+    "static_component": 0,
+    "dynamic_component": 1,
+    "obfuscation": {
+      "packed_or_obfuscated": false,
+      "high_entropy_sections": []
+    },
+    "behavior_flow": []
+  },
+  "dynamic_analysis": {
+    "syscall_findings": {
+      "network": 0,
+      "file_modification": 0,
+      "process_injection": 0,
+      "privilege": 0,
+      "execution": 1
+    },
+    "behavioral_risk": 1,
+    "behavioral_severity": "low"
+  }
+}

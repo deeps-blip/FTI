@@ -1,0 +1,13 @@
+{
+  "binary_name": "test_sample.exe",
+  "analysis_timestamp_utc": "2026-03-10_13-01-07",
+  "analysis_engine": "fti-hybrid-static-dynamic",
+  "schema_version": "1.5",
+  "md5": "37471efe73f2bc1cd4025905b43e5d7b",
+  "sha1": "e56e0870c8ff4cea93fb5b8e8f67d074968b80d9",
+  "sha256": "1c086cbad6defbbeb1185dd915784500ccf2f15ffe92e8dd13bc8a35e5fff154",
+  "size_bytes": 8596,
+  "entropy": 4.947,
+  "architecture": null,
+  "format": null
+}

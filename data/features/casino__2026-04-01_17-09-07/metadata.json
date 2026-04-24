@@ -1,0 +1,13 @@
+{
+  "binary_name": "casino",
+  "analysis_timestamp_utc": "2026-04-01_17-09-07",
+  "analysis_engine": "fti-hybrid-static-dynamic",
+  "schema_version": "1.5",
+  "md5": "0478c3a259655afcd1cc67e808c20861",
+  "sha1": "91cc879220bf6b21edb1bd38ad0a959fbba49ae0",
+  "sha256": "b93bef52fd4178d7914752d87bf0b5ca2b93fcbd9d76a668cd68c8f873169257",
+  "size_bytes": 17064,
+  "entropy": 1.995,
+  "architecture": "x86",
+  "format": null
+}
