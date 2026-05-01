@@ -224,6 +224,32 @@ async def download_report(sample_id: str):
     
     return FileResponse(path=report_path, filename=f"report_{sample_id}.txt", media_type='text/plain')
 
+# --- FEDERATED LEARNING ENDPOINTS ---
+
+@app.post("/federated/train")
+async def trigger_federated_train():
+    """Trigger a local federated learning round."""
+    try:
+        from federated.client import run_federated_round
+        run_federated_round()
+        return {"status": "Federated training round completed successfully"}
+    except Exception as e:
+        logger.error(f"Federated training error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/federated/status")
+async def get_federated_status():
+    """Check if a federated model is available locally."""
+    try:
+        from federated.local_model import FederatedRiskScorer
+        scorer = FederatedRiskScorer()
+        return {
+            "model_available": scorer.is_available(),
+            "model_type": "FederatedRiskScorer (Linear/SGD)"
+        }
+    except Exception as e:
+        return {"model_available": False, "error": str(e)}
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

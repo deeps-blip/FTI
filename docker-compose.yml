@@ -18,6 +18,9 @@ services:
       - "8000:8000"
     environment:
       - GEMINI_API_KEY=AIzaSyAAJiTVHkO7zssHvtG86OJH1rVbc1DmoKM
+      - MODELS_DIR=/app/data/global_models
+      - AGGREGATOR_URL=http://aggregator:8001
+      - CLIENT_ID=fti-node-1
 
     # Volumes (MOST IMPORTANT PART)
     volumes:
@@ -30,9 +33,25 @@ services:
       # Generated features & reports (WRITEABLE, persisted)
       - ./data/features:/app/data/features
 
+      # Global models
+      - ./data/global_models:/app/data/global_models
 
     # Disable network for malware safety (OPTIONAL but recommended)
     # network_mode: "none"
+
+  aggregator:
+    build: 
+      context: .
+      dockerfile: Dockerfile.aggregator
+    container_name: fti-aggregator
+    networks:
+      - fti-network
+    ports:
+      - "8001:8001"
+    environment:
+      - MODELS_DIR=/app/models
+    volumes:
+      - ./data/global_models:/app/models
 
   frontend:
     build: ./frontend
@@ -46,3 +65,4 @@ services:
       - fti-network
     depends_on:
       - intake
+

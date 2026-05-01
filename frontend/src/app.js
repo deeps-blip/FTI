@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'behavior': 'analysis-module',
             'network': 'analysis-module',
             'reports': 'analysis-module',
+            'federated': 'analysis-module',
             'logs': 'welcome-module'
         };
 
@@ -258,6 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (moduleName === 'strings') {
             title.textContent = `/FUNCTIONS-ANALYSIS`;
+        } else if (moduleName === 'federated') {
+            title.textContent = `/FEDERATED-LEARNING`;
         } else {
             title.textContent = `/${moduleName.toUpperCase()}-ANALYSIS`;
         }
@@ -267,12 +270,18 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.className = 'retro-btn';
         if (moduleName === 'strings') {
             btn.textContent = `RUN FUNCTIONS SCAN`;
+        } else if (moduleName === 'federated') {
+            btn.textContent = `TRIGGER GLOBAL TRAINING`;
         } else {
             btn.textContent = `RUN ${moduleName.toUpperCase()} SCAN`;
         }
-        btn.disabled = !state.currentSample;
         
-        if (!state.currentSample) {
+        btn.disabled = (moduleName !== 'federated') && !state.currentSample;
+        
+        if (moduleName === 'federated') {
+            desc.textContent = `COLLABORATIVE INTELLIGENCE SYNC. SENDS LOCAL UPDATES TO AGGREGATOR.`;
+            desc.classList.remove('text-[#ff4444]');
+        } else if (!state.currentSample) {
             desc.textContent = 'WARNING: NO SAMPLE SELECTED. BROWSE /SAMPLES FIRST.';
             desc.classList.add('text-[#ff4444]');
         } else {
@@ -285,27 +294,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function runAnalysis(type) {
-        if (!state.currentSample) return;
+        if (type !== 'federated' && !state.currentSample) return;
         
         setProcessing(true);
         logToTerminal(`INITIATING ${type.toUpperCase()} ANALYSIS...`);
         
         let endpoint = '';
+        let url = '';
+
         switch(type) {
-            case 'hash': endpoint = '/analysis/static/hash'; break;
-            case 'strings': endpoint = '/analysis/static/functions'; break;
-            case 'entropy': endpoint = '/analysis/static/entropy'; break;
-            case 'pe': endpoint = '/analysis/static/pe'; break;
-            case 'behavior': endpoint = '/analysis/dynamic'; break;
-            case 'network': endpoint = '/analysis/dynamic?network_only=true'; break;
-            case 'reports': endpoint = '/report'; break;
-            default: endpoint = '/analysis/static/hash';
+            case 'hash': endpoint = `/samples/${state.currentSample}/analysis/static/hash`; break;
+            case 'strings': endpoint = `/samples/${state.currentSample}/analysis/static/functions`; break;
+            case 'entropy': endpoint = `/samples/${state.currentSample}/analysis/static/entropy`; break;
+            case 'pe': endpoint = `/samples/${state.currentSample}/analysis/static/pe`; break;
+            case 'behavior': endpoint = `/samples/${state.currentSample}/analysis/dynamic`; break;
+            case 'network': endpoint = `/samples/${state.currentSample}/analysis/dynamic?network_only=true`; break;
+            case 'reports': endpoint = `/samples/${state.currentSample}/report`; break;
+            case 'federated': endpoint = `/federated/train`; break;
+            default: endpoint = `/samples/${state.currentSample}/analysis/static/hash`;
         }
 
-        const method = (type === 'reports') ? 'POST' : 'GET';
+        url = `${state.apiBase}${endpoint}`;
+        const method = (type === 'reports' || type === 'federated') ? 'POST' : 'GET';
 
         try {
-            const response = await fetch(`${state.apiBase}/samples/${state.currentSample}${endpoint}`, { method });
+            const response = await fetch(url, { method });
             if (response.ok) {
                 const data = await response.json();
                 displayResults(type, data);
