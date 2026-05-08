@@ -17,7 +17,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - GEMINI_API_KEY=AIzaSyAAJiTVHkO7zssHvtG86OJH1rVbc1DmoKM
+      - GEMINI_API_KEY=your-gemini-api-key
       - MODELS_DIR=/app/data/global_models
       - AGGREGATOR_URL=http://aggregator:8001
       - CLIENT_ID=fti-node-1
